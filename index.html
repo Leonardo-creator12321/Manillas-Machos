@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MACHOS MANILLAS | Editorial Luxury &amp; Craftsmanship</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            editorial: ['"Cinzel"', 'serif'],
+          },
+          colors: {
+            sunset: {
+              velvet: '#0B0B12',
+              card: 'rgba(23, 20, 31, 0.72)',
+              gold: '#F59E0B',
+              terracotta: '#EA580C',
+              ruby: '#E11D48',
+              purple: '#7C3AED',
+              cyan: '#06B6D4',
+              bronze: '#C27803',
+              border: 'rgba(245, 158, 11, 0.18)'
+            }
+          },
+          animation: {
+            'aurora-glow-1': 'auroraOne 18s ease-in-out infinite alternate',
+            'aurora-glow-2': 'auroraTwo 16s ease-in-out infinite alternate',
+            'aurora-glow-3': 'auroraThree 20s ease-in-out infinite alternate',
+            'aurora-glow-4': 'auroraFour 22s ease-in-out infinite alternate',
+            'shimmer-text': 'textShimmer 5s ease infinite',
+            'float-slow': 'floatSlow 6s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 2.5s ease-in-out infinite',
+            'bead-pop': 'beadPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
+          },
+          keyframes: {
+            auroraOne: {
+              '0%': { transform: 'scale(1) translate(0%, 0%) rotate(0deg)' },
+              '50%': { transform: 'scale(1.3) translate(12%, 8%) rotate(18deg)' },
+              '100%': { transform: 'scale(0.95) translate(-8%, 14%) rotate(-12deg)' }
+            },
+            auroraTwo: {
+              '0%': { transform: 'scale(1.1) translate(0%, 0%) rotate(0deg)' },
+              '50%': { transform: 'scale(1.35) translate(-14%, -10%) rotate(-20deg)' },
+              '100%': { transform: 'scale(0.9) translate(10%, -6%) rotate(15deg)' }
+            },
+            auroraThree: {
+              '0%': { transform: 'scale(0.9) translate(0%, 0%)' },
+              '50%': { transform: 'scale(1.25) translate(8%, -12%)' },
+              '100%': { transform: 'scale(1.05) translate(-10%, 6%)' }
+            },
+            auroraFour: {
+              '0%': { transform: 'scale(0.85) translate(-5%, 5%)' },
+              '50%': { transform: 'scale(1.2) translate(15%, -8%)' },
+              '100%': { transform: 'scale(1) translate(-12%, -15%)' }
+            },
+            textShimmer: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' }
+            },
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-7px)' }
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.8', boxShadow: '0 0 15px rgba(245, 158, 11, 0.25)' },
+              '50%': { opacity: '1', boxShadow: '0 0 30px rgba(225, 29, 72, 0.45)' }
+            },
+            beadPop: {
+              '0%': { transform: 'scale(0.3) translateY(8px)', opacity: '0' },
+              '70%': { transform: 'scale(1.12) translateY(-2px)', opacity: '1' },
+              '100%': { transform: 'scale(1) translateY(0px)', opacity: '1' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #08080E;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Dynamic Fluid Glowing Aurora Backdrop */
+    .aurora-container {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .aurora-blob-1 {
+      position: absolute;
+      top: -12%;
+      left: -12%;
+      width: 65vw;
+      height: 65vw;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(225, 29, 72, 0.32) 0%, rgba(124, 58, 237, 0.22) 45%, transparent 70%);
+      filter: blur(85px);
+    }
+    .aurora-blob-2 {
+      position: absolute;
+      top: 25%;
+      right: -15%;
+      width: 60vw;
+      height: 60vw;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.28) 0%, rgba(234, 88, 12, 0.22) 45%, transparent 70%);
+      filter: blur(95px);
+    }
+    .aurora-blob-3 {
+      position: absolute;
+      bottom: -15%;
+      left: 15%;
+      width: 58vw;
+      height: 58vw;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(124, 58, 237, 0.26) 0%, rgba(6, 182, 212, 0.18) 50%, transparent 70%);
+      filter: blur(100px);
+    }
+    .aurora-blob-4 {
+      position: absolute;
+      top: 55%;
+      left: -10%;
+      width: 45vw;
+      height: 45vw;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, rgba(225, 29, 72, 0.16) 50%, transparent 70%);
+      filter: blur(90px);
+    }
+
+    /* Ambient drifting sparks canvas */
+    #sparkles-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.65;
+    }
+
+    .editorial-card {
+      background: linear-gradient(145deg, rgba(26, 22, 38, 0.72) 0%, rgba(15, 13, 23, 0.86) 100%);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.7), 0 0 24px -10px rgba(225, 29, 72, 0.18);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .editorial-card:hover {
+      transform: translateY(-8px) scale(1.015);
+      border-color: rgba(245, 158, 11, 0.55);
+      box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.8), 0 0 35px 2px rgba(245, 158, 11, 0.28), 0 0 45px -5px rgba(225, 29, 72, 0.32);
+    }
+
+    .glass-luxury-nav {
+      background: rgba(13, 12, 20, 0.78);
+      backdrop-filter: blur(26px);
+      -webkit-backdrop-filter: blur(26px);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.65);
+    }
+
+    .animated-gold-gradient {
+      background: linear-gradient(120deg, #FFFFFF 0%, #FFF2B2 20%, #F59E0B 40%, #EA580C 65%, #E11D48 85%, #FFF2B2 100%);
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textShimmer 6s linear infinite;
+    }
+
+    /* 3D-styled Beads for live customizer preview */
+    .bead-letter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 9999px;
+      background: radial-gradient(circle at 35% 30%, #ffffff 0%, #f4f4f5 55%, #d4d4d8 100%);
+      color: #b45309;
+      font-weight: 900;
+      font-size: 13px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), inset 0 2px 3px rgba(255, 255, 255, 0.9), inset 0 -2px 3px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      animation: beadPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .bead-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 9999px;
+      background: radial-gradient(circle at 35% 30%, #ffffff 0%, #f1f5f9 60%, #cbd5e1 100%);
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 13px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), inset 0 2px 3px rgba(255, 255, 255, 0.9), inset 0 -2px 3px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(225, 29, 72, 0.35);
+      animation: beadPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .bead-mineral-accent {
+      display: inline-flex;
+      width: 22px;
+      height: 22px;
+      border-radius: 9999px;
+      background: radial-gradient(circle at 30% 30%, #67e8f9 0%, #06b6d4 50%, #0e7490 100%);
+      box-shadow: 0 0 12px rgba(6, 182, 212, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.8);
+      animation: beadPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    /* Luxury pulse floating elements */
+    .glow-pulse-amber {
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #08080E;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #251f38;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #F59E0B;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen selection:bg-amber-500 selection:text-black pb-28 sm:pb-16">
+<!-- Ambient Particle Canvas -->
+<canvas id="sparkles-canvas"></canvas>
+<!-- Dynamic Fluid Glowing Aurora Background -->
+<div class="aurora-container">
+<div class="aurora-blob-1 animate-aurora-glow-1"></div>
+<div class="aurora-blob-2 animate-aurora-glow-2"></div>
+<div class="aurora-blob-3 animate-aurora-glow-3"></div>
+<div class="aurora-blob-4 animate-aurora-glow-4"></div>
+<div class="absolute inset-0 bg-[radial-gradient(#F59E0B_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.04]"></div>
+</div>
+<!-- Main Container -->
+<div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 pt-3 sm:pt-5">
+<!-- Sticky Editorial Luxury Header -->
+<header class="sticky top-3 z-40 mb-7">
+<nav class="glass-luxury-nav rounded-2xl px-4 py-3 flex items-center justify-between transition-all">
+<a class="flex items-center gap-3.5 group" href="#hero">
+<!-- Logo -->
+<div class="relative w-12 h-12 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 via-rose-600 to-purple-600 shadow-lg shadow-rose-900/40 group-hover:scale-105 group-hover:rotate-6 transition-all duration-300">
+<img alt="Machos Manillas Six Seven SML" class="w-full h-full object-cover rounded-full bg-black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKI5IaJos84vTjiefo35nwJrYSGfeLZFxx7Duel4zoB0FFdNwbWPNoHyaCtscGwtEdPInCKhmARmEI2oUTYhlWYGpqhiMLH-9h6fzV0eKFnLILBcYk0YRNVQp7JNAB23EF1X8VKMs1L2T6THpwXFVypfWooDZDnf6zS1jiJEOot-Rpx7eYeVqhJcBeucA12DZvLZU3MNorYrpOLJvkmv91y0TCubQ29OvDT44supBSrPz_30yMs_PboZ9XP_PCe-t8ww"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-emerald-400 border-2 border-[#0B0B12] rounded-full animate-ping"></span>
+<span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-emerald-400 border-2 border-[#0B0B12] rounded-full"></span>
+</div>
+<div>
+<span class="block text-xs sm:text-sm font-bold tracking-[0.22em] text-amber-300 uppercase font-editorial group-hover:text-amber-200 transition-colors">MACHOS MANILLAS</span>
+<span class="block text-[10px] text-zinc-400 font-medium tracking-widest uppercase">Six Seven SML • Edición Artesanal</span>
+</div>
+</a>
+<!-- Fast Action Cart & Quick Contact (Only Nequi + WhatsApp) -->
+<div class="flex items-center gap-2">
+<a class="hidden md:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-pink-500/15 to-purple-500/15 text-pink-300 border border-pink-500/30 hover:bg-pink-500/25 hover:border-pink-400 hover:scale-105 active:scale-95 transition-all shadow-sm shadow-pink-900/30" href="#pagos-colombia">
+<span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
+<span class="font-mono font-bold">Nequi 320 430 6618</span>
+</a>
+<a class="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/25 hover:border-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-sm shadow-emerald-950/30" href="https://wa.me/573204306618?text=Hola!%20Deseo%20hacer%20un%20pedido%20de%20Machos%20Manillas" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm text-emerald-400">chat</span>
+<span>WhatsApp</span>
+</a>
+<button class="relative flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-amber-500/30 text-amber-100 hover:bg-amber-500/15 hover:border-amber-400 hover:scale-110 active:scale-95 transition-all duration-200 glow-pulse-amber" onclick="toggleCartModal()" title="Ver carrito">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-gradient-to-r from-amber-500 to-rose-600 text-white text-[10px] font-black flex items-center justify-center shadow-lg transform scale-0 transition-transform duration-200" id="cart-badge">0</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Editorial Hero Section -->
+<section class="text-center py-6 sm:py-14" id="hero">
+<!-- High Luxury Craftsmanship Badge -->
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500/15 via-rose-500/15 to-purple-500/15 border border-amber-500/40 text-xs text-amber-200 mb-5 backdrop-blur-md shadow-lg shadow-rose-950/30 animate-float-slow">
+<span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+<span class="font-medium tracking-wide">Orfebrería Textil &amp; Minerales</span>
+<span class="text-amber-500/60">•</span>
+<span class="text-rose-400 font-bold uppercase tracking-wider text-[11px]">Envíos Colombia</span>
+</div>
+<!-- Main Editorial Headline with Dynamic Animated Gradient -->
+<h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-4 font-editorial leading-[1.15]">
+<span class="animated-gold-gradient block drop-shadow-sm">Artesanía Con Carácter,</span>
+<span class="text-white">Fuerza &amp; Identidad Propia</span>
+</h1>
+<p class="max-w-xl mx-auto text-sm sm:text-base text-zinc-300 font-normal leading-relaxed mb-7 px-2">
+      Inspiradas en el calor del atardecer y minerales nobles. Tejidos en nudos de alta resistencia, cuarzos genuinos y tipografía dorada personalizada para portar tu historia.
+    </p>
+<!-- Primary Editorial CTAs with energetic shine -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 px-4 max-w-md mx-auto">
+<a class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-amber-500 via-rose-600 to-purple-600 text-white font-bold text-xs uppercase tracking-widest shadow-xl shadow-rose-900/40 hover:scale-[1.05] hover:shadow-2xl hover:shadow-amber-500/30 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 group" href="#catalogo">
+<span>Ver Colección Real</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-y-1 transition-transform">arrow_downward</span>
+</a>
+<a class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white/5 border border-amber-500/30 hover:border-amber-400 hover:bg-amber-500/10 text-amber-200 font-semibold text-xs tracking-wider uppercase backdrop-blur-md hover:scale-[1.03] active:scale-95 transition-all flex items-center justify-center gap-2" href="#personalizacion-guia">
+<span class="material-symbols-outlined text-sm text-amber-400">auto_fix</span>
+<span>¿Cómo Personalizar?</span>
+</a>
+</div>
+<!-- Luxury Trust Stat Bar with Breathing Accent Glow -->
+<div class="grid grid-cols-3 gap-3 max-w-md mx-auto mt-9 pt-6 border-t border-amber-500/20 text-center">
+<div class="p-2 rounded-xl bg-white/[0.02] border border-transparent hover:border-amber-500/20 transition-all">
+<p class="text-xl sm:text-2xl font-black text-amber-400 font-editorial drop-shadow-[0_0_12px_rgba(245,158,11,0.4)]">100%</p>
+<p class="text-[11px] text-zinc-400 font-medium mt-0.5">Hecho a mano</p>
+</div>
+<div class="p-2 rounded-xl bg-white/[0.02] border border-transparent hover:border-rose-500/20 transition-all">
+<p class="text-xl sm:text-2xl font-black text-rose-400 font-editorial drop-shadow-[0_0_12px_rgba(225,29,72,0.4)]">Desde $2K</p>
+<p class="text-[11px] text-zinc-400 font-medium mt-0.5">Precios Justos</p>
+</div>
+<div class="p-2 rounded-xl bg-white/[0.02] border border-transparent hover:border-pink-500/20 transition-all">
+<p class="text-xl sm:text-2xl font-black text-pink-400 font-editorial drop-shadow-[0_0_12px_rgba(236,72,153,0.4)]">Directo</p>
+<p class="text-[11px] text-zinc-400 font-medium mt-0.5">Nequi &amp; WhatsApp</p>
+</div>
+</div>
+</section>
+<!-- 3-Step Customization Feature Card -->
+<section class="mb-12" id="personalizacion-guia">
+<div class="editorial-card rounded-3xl p-6 sm:p-8 border border-amber-500/30 relative overflow-hidden">
+<div class="absolute -right-16 -bottom-16 w-56 h-56 bg-gradient-to-br from-amber-500/15 to-rose-600/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6 border-b border-white/10 pb-4">
+<div>
+<span class="text-[11px] font-bold tracking-widest text-amber-400 uppercase">Proceso a Tu Medida</span>
+<h3 class="text-xl sm:text-2xl font-black text-white font-editorial">¿Cómo Personalizar Tu Manilla en 3 Pasos?</h3>
+</div>
+<span class="inline-flex items-center gap-1.5 text-xs text-rose-300 font-semibold bg-rose-500/10 border border-rose-500/30 px-3.5 py-1.5 rounded-full w-fit shadow-sm shadow-rose-950/40">
+<span class="material-symbols-outlined text-sm text-rose-400">palette</span>
+          Tú eliges el texto o número
+        </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-black/40 hover:bg-black/50 transition-colors rounded-2xl p-4 border border-amber-500/20 flex flex-col justify-between group">
+<div>
+<span class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-500 text-white font-black text-xs flex items-center justify-center mb-3 shadow-md shadow-amber-950/50 group-hover:scale-110 transition-transform">1</span>
+<h4 class="text-sm font-bold text-amber-200 mb-1">Elige Tu Modelo Base</h4>
+<p class="text-xs text-zinc-400 leading-relaxed">Selecciona si deseas estilo letras doradas, números especiales, piedras de cuarzo o tejido sencillo.</p>
+</div>
+<span class="text-[10px] text-amber-400/80 mt-3 font-mono font-medium">Paso inicial</span>
+</div>
+<div class="bg-black/40 hover:bg-black/50 transition-colors rounded-2xl p-4 border border-rose-500/20 flex flex-col justify-between group">
+<div>
+<span class="w-8 h-8 rounded-xl bg-gradient-to-tr from-rose-500 to-purple-600 text-white font-black text-xs flex items-center justify-center mb-3 shadow-md shadow-rose-950/50 group-hover:scale-110 transition-transform">2</span>
+<h4 class="text-sm font-bold text-rose-200 mb-1">Escribe tu Letra, Nombre o Fecha</h4>
+<p class="text-xs text-zinc-400 leading-relaxed">Escribe tu texto en el cajón del producto (ej: "SIX SEVEN 67", iniciales, o fecha "09 08") y mira la simulación en vivo.</p>
+</div>
+<span class="text-[10px] text-rose-400/80 mt-3 font-mono font-medium">Personalización interactiva</span>
+</div>
+<div class="bg-black/40 hover:bg-black/50 transition-colors rounded-2xl p-4 border border-purple-500/20 flex flex-col justify-between group">
+<div>
+<span class="w-8 h-8 rounded-xl bg-gradient-to-tr from-purple-600 to-emerald-500 text-white font-black text-xs flex items-center justify-center mb-3 shadow-md shadow-purple-950/50 group-hover:scale-110 transition-transform">3</span>
+<h4 class="text-sm font-bold text-purple-200 mb-1">Envía el Pedido &amp; Paga por Nequi</h4>
+<p class="text-xs text-zinc-400 leading-relaxed">Tu carrito arma el mensaje completo para WhatsApp con el desglose exacto y la cuenta Nequi directa.</p>
+</div>
+<span class="text-[10px] text-purple-400/80 mt-3 font-mono font-medium">Despacho garantizado</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Catalog Header & Filter Tabs -->
+<section class="pt-4 pb-5" id="catalogo">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-5">
+<div>
+<span class="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-400">Colección Artesanal 2026</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-editorial">Piezas Disponibles</h2>
+</div>
+<p class="text-xs text-zinc-400 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Fotos reales del taller Six Seven SML
+      </p>
+</div>
+<!-- Filter Buttons -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+<button class="filter-btn active px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all shrink-0 bg-gradient-to-r from-amber-500 to-rose-600 text-white shadow-md shadow-rose-900/40 hover:scale-105 active:scale-95" data-cat="todos" onclick="filterCategory('todos')">
+        ✨ Todas las Piezas
+      </button>
+<button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold border border-amber-500/30 hover:border-amber-400 transition-all shrink-0 bg-white/5 text-amber-200 hover:scale-105 active:scale-95" data-cat="personalizadas" onclick="filterCategory('personalizadas')">
+        🔤 Con Letras / Números
+      </button>
+<button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold border border-amber-500/30 hover:border-amber-400 transition-all shrink-0 bg-white/5 text-amber-200 hover:scale-105 active:scale-95" data-cat="minerales" onclick="filterCategory('minerales')">
+        💎 Piedras &amp; Protección
+      </button>
+<button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold border border-amber-500/30 hover:border-amber-400 transition-all shrink-0 bg-white/5 text-amber-200 hover:scale-105 active:scale-95" data-cat="clasicas" onclick="filterCategory('clasicas')">
+        🧵 Tejido Clásico
+      </button>
+</div>
+</section>
+<!-- Products Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pb-12" id="products-grid">
+<!-- PRODUCT 1: Manilla Sencilla Tejida ($2.000) - IMAGE_11 -->
+<div class="product-card editorial-card rounded-2xl p-4 flex flex-col justify-between" data-category="clasicas">
+<div>
+<div class="relative w-full h-60 rounded-xl overflow-hidden bg-black/60 border border-amber-500/20 group mb-3.5">
+<img alt="Manilla Sencilla Tejida" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 cursor-pointer" onclick="openImageModal('https://lh3.googleusercontent.com/aida-public/AB6AXuDciivOPNJPnSkgHGxmZYM2EBBIhW0n5dCp2kAqIa6E41AJvyIld2EpdrYCJ3LAchsCtJaJLhIQOMpW_F8c8cSrktQcOiITU0A4sAdLvjn8_-YIMs4Xi7ZvAvfy7Wmg_R87-o0Qtgw2x1pzLyR2irks6SZ_vaKuyc7TJXbOy4IMaYwHRE_tPxDpcbWL0zGW7FHAZJcJjxuHrCzQSAxmTpm_3Raw1n1o_aSy3lp-2UBptof5XvmS8DwiiJCKBkmyH-1lSg', 'Manilla Sencilla Tejida ($2.000)')" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByYxJOhU-ATYCFOmAr2R4r5fPDv4evI9joHJ8Jh21vWFcFS6kiabMtWYDQ8hx7L2Mw2hiA37Q89lploPPklMgKpDMJhfdCthGTsU2kmqDFFd_Iz9UDI4BUGrboJyxwcUYXv6Xw8axzRaohvwm3pqB5dOB5fE4LWJTbNXDpLKivN131KkLeSPRq14AQnPJNN7P5HVgI1WQAt0JWAi0ltfhKF-vLUKrvDFbbpd1RTpGyZ71x2LgEQc5Jd5LPc8rJTJn72g"/>
+<div class="absolute top-2.5 left-2.5 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-amber-500/40 text-[10px] font-bold text-amber-300 flex items-center gap-1.5 uppercase tracking-wider shadow-md">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>
+<span>Tejido Artesanal</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-lg bg-black/80 backdrop-blur-md text-[10px] text-amber-200/90 font-mono border border-white/10">
+            Nudo Corredizo
+          </div>
+</div>
+<div class="flex items-start justify-between gap-2 mb-1.5">
+<div>
+<h3 class="font-bold text-base text-white tracking-tight font-editorial">Manilla Sencilla Tejida</h3>
+<p class="text-[11px] text-amber-400/80">Cuentas turquesa &amp; cordón azul imperial</p>
+</div>
+<span class="text-base font-black text-amber-400 font-editorial drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">$2.000</span>
+</div>
+<p class="text-xs text-zinc-300 leading-relaxed mb-4">
+          Tejido fino artesanal con cuentas facetadas celestes y cordón azul de alta tenacidad. Ajustable a cualquier muñeca.
+        </p>
+</div>
+<div class="space-y-2 pt-3 border-t border-amber-500/15">
+<select class="w-full bg-[#13111d] border border-amber-500/25 rounded-xl px-3 py-2 text-xs text-amber-100 focus:outline-none focus:border-amber-400" id="color-sencilla">
+<option value="Azul Imperial con Cuentas Turquesa (Foto)">Variante: Azul con Cuentas Turquesa (Foto Original)</option>
+<option value="Negro Onyx Total">Variante: Negro Clásico</option>
+<option value="Rojo Carmesí">Variante: Rojo Carmesí</option>
+</select>
+<button class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-600 hover:from-amber-400 hover:to-rose-500 active:scale-95 text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-md shadow-amber-900/30 hover:shadow-lg hover:shadow-amber-500/25" onclick="addToCart('Manilla Sencilla Tejida', 2000, 'https://lh3.googleusercontent.com/aida-public/AB6AXuDmib_hYcMNtJh4eZCGLw9ueG0HqMzoTFm_APtCw0D-oeVBUZA_4bglk8LbJtH37zs4r74m8dGpOI3Asv12G8wslfmRkpdREvQ--A_4jZcba8hRiWINTwuunvPL18gARQoU9F_aTWnN7GmLt9DSgNJgZ_wbcjHe1CjwzalEf7KjAGS3PI6VddmyVkNnfRMQV_SBjh9ypBzO4HEldFngSCXjk4vzpsMk6Dx25C7BhSpFdc5HYC7fquRryYqyLKxT_S6szQ', 'color-sencilla')">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+<span>Agregar al Pedido • $2.000</span>
+</button>
+</div>
+</div>
+<!-- PRODUCT 2: Manilla Nombre / Letras Six Seven ($3.000) - IMAGE_8 -->
+<div class="product-card editorial-card rounded-2xl p-4 flex flex-col justify-between" data-category="personalizadas">
+<div>
+<div class="relative w-full h-60 rounded-xl overflow-hidden bg-black/60 border border-amber-500/20 group mb-3.5">
+<img alt="Manilla Nombre / Letras Six Seven" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 cursor-pointer" onclick="openImageModal('https://lh3.googleusercontent.com/aida-public/AB6AXuD1hMwwfGX3lt4BEkEFNy2bpwPXqq5MQlLnUiM800TueeblFYCu0_pp-W2tBTO7vM5Y1WdQuEd6rCjbN0R1Rad4-izLBBzSe3aMosahnOqCj5fxfeBCWI-2JGuC2tg0upkDpWGQDi-kkMMXyHKh9IvcIXzZw3cnD-MXP0wnLoP6vLv8sAznaFlXproEoRsvkjtWxiuTJY0pFYwhq0wLH2h9uEMNr_jdKbSxgEr3Ky68Vbp8kgGL-2Ua7J-6Yxa0bMfBuw', 'Manilla Nombre / Letras Six Seven ($3.000)')" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Z9E98izZgT-x2_FUirzglElPzI345_8v6mubnhXgwBIVbGqEit3gy0yL9U5HF0MzW0eEdiUHaTvq7tF61SCiNjzALyo5xRpMhAQycFA2ST6vk87ENdNQ78OJALLfLb6bNrObsvb5A9gXjj8K4GvLhshsIRNhXCObJk9Zk49phAeIA7asfA3ctIKQMOmYsVvaQpZ-ZfxliS9RO1usRAgsQIR1-uXDd5v4Z9WnslkmQN0aAaqNFymK8HeDoQbOnz1_Qg"/>
+<div class="absolute top-2.5 left-2.5 px-3 py-1 rounded-full bg-amber-500/25 backdrop-blur-md border border-amber-400/50 text-[10px] font-bold text-amber-200 flex items-center gap-1.5 uppercase tracking-wider shadow-md">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>
+<span>Letras Doradas</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-lg bg-black/80 backdrop-blur-md text-[10px] text-amber-300 font-mono border border-white/10">
+            Cordón Blanco Six Seven
+          </div>
+</div>
+<div class="flex items-start justify-between gap-2 mb-1.5">
+<div>
+<h3 class="font-bold text-base text-white tracking-tight font-editorial">Manilla Nombre / Letras</h3>
+<p class="text-[11px] text-amber-400/80">Personalizada con tu nombre, iniciales o apodo</p>
+</div>
+<span class="text-base font-black text-amber-400 font-editorial drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">$3.000</span>
+</div>
+<p class="text-xs text-zinc-300 leading-relaxed mb-3">
+          Cuentas esmaltadas con letras doradas de alto brillo y esferas de tono azul en los extremos. Como el icónico "SIX SEVEN 67".
+        </p>
+<!-- Live 3D Bead Preview for Custom Name -->
+<div class="bg-black/50 rounded-xl p-2.5 mb-3 border border-amber-500/25 min-h-[46px] flex flex-col justify-center">
+<div class="text-[10px] text-amber-300/80 uppercase tracking-widest font-mono mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-amber-400">visibility</span>
+<span>Simulador de Manilla en Vivo:</span>
+</div>
+<div class="flex items-center gap-1 overflow-x-auto py-1 scrollbar-none" id="preview-beads-nombre">
+<span class="bead-mineral-accent"></span>
+<span class="bead-letter">S</span>
+<span class="bead-letter">I</span>
+<span class="bead-letter">X</span>
+<span class="bead-letter">7</span>
+<span class="bead-mineral-accent"></span>
+</div>
+</div>
+</div>
+<div class="space-y-2 pt-2 border-t border-amber-500/15">
+<input class="w-full bg-[#13111d] border border-amber-500/25 rounded-xl px-3 py-2 text-xs text-amber-100 placeholder-zinc-500 focus:outline-none focus:border-amber-400 transition" id="custom-nombre" oninput="updateNamePreview(this.value)" placeholder="Escribe tu texto (ej: SIX SEVEN, TU NOMBRE)..." type="text"/>
+<button class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-terracotta hover:from-amber-400 hover:to-orange-500 active:scale-95 text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-md shadow-amber-900/30 hover:shadow-lg hover:shadow-amber-500/25" onclick="addCustomProduct('Manilla con Nombre/Letras', 3000, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCBohDwkGX-sfOIeIBvr8lRo7KgvrJDzbPrKW6jYdlAeYAB3T5s5P8IpY7-CgmghowVUyf319w6CmeFOHo01YMKdSFDaxJof06QsOKr_3QKR6A1NoInzMnxN0F0nXNityTM2iNIkd3BczMfH4XRfKuZLA5P3BfnhdmdGfLeD6SRyYXtoMJLX9bIBDWdtL1QvN7nFCODxV5_eidvAjrwqf19t9Xl9u6HFAKGcg_kCqvScUH7dFDrEPAc1KBBsN5tbtcQKw', 'custom-nombre')">
+<span class="material-symbols-outlined text-sm">edit_note</span>
+<span>Agregar con tu Texto • $3.000</span>
+</button>
+</div>
+</div>
+<!-- PRODUCT 3: Manilla Números / Fechas ($2.500) - IMAGE_7 -->
+<div class="product-card editorial-card rounded-2xl p-4 flex flex-col justify-between" data-category="personalizadas">
+<div>
+<div class="relative w-full h-60 rounded-xl overflow-hidden bg-black/60 border border-amber-500/20 group mb-3.5">
+<img alt="Manilla Números / Fechas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 cursor-pointer" onclick="openImageModal('https://lh3.googleusercontent.com/aida-public/AB6AXuDgaLkxN2n-nv6qASVa7KiFL3tTnhyzI5qq-yGhNaWC12YXWS8J-1FQ78l_mrPnEAJyUGNdKQD7zLk042IZ5ZM9_TbowpIoEF0GMxpAANHIdzzbIJ4DrR-RyjkGP7rEXjueV467DCnYYIOfa3HBCcj13X4tmqbOzVShO9ORGX-Ui2M8-YNJNhCx1bceoZCdQol9pTCPrxzIjOPgvfezlMUAbzlRazx0cUNgOoIer3C0vvWIM5bBicxUgNcp5p4tgnnB8Q', 'Manilla Números / Fechas ($2.500)')" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSsnwHk79zjUdPOYt4zFm7DT3Sq_xRiGQjDssnouQkAhg7bj3KelvMaNPUtJm1Kr3dqGP6KdaGsEcDN4FtQqmVXTvxsRN5A5XVMJCsHNDsHcp1qGql5zzyS81WuSvXnAxNR0YYeSX4QJiF1pUzPiJ4gmYsZmUUIjBI9mi6J24BplLBuzeCRw7XAcdp2DK-B5AM9v9k15TQEwiHrL-86KTI_4qPOhzGB6VL86cLHdQTzWX3bp-5c_EiUXUh0Q9NRsNTtw"/>
+<div class="absolute top-2.5 left-2.5 px-3 py-1 rounded-full bg-rose-500/25 backdrop-blur-md border border-rose-400/50 text-[10px] font-bold text-rose-200 flex items-center gap-1.5 uppercase tracking-wider shadow-md">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-ping"></span>
+<span>Fechas &amp; Códigos</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-lg bg-black/80 backdrop-blur-md text-[10px] text-zinc-300 font-mono border border-white/10">
+            Acento Azul Neón
+          </div>
+</div>
+<div class="flex items-start justify-between gap-2 mb-1.5">
+<div>
+<h3 class="font-bold text-base text-white tracking-tight font-editorial">Manilla Números / Fechas</h3>
+<p class="text-[11px] text-rose-400/80">Fechas de aniversario, dorsales o amuletos</p>
+</div>
+<span class="text-base font-black text-amber-400 font-editorial drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">$2.500</span>
+</div>
+<p class="text-xs text-zinc-300 leading-relaxed mb-3">
+          Lleva una fecha imborrable o tu combinación de suerte con cuentas circulares nítidas y cordón ajustable blanco de alta pureza.
+        </p>
+<!-- Live 3D Bead Preview for Custom Numbers -->
+<div class="bg-black/50 rounded-xl p-2.5 mb-3 border border-rose-500/25 min-h-[46px] flex flex-col justify-center">
+<div class="text-[10px] text-rose-300/80 uppercase tracking-widest font-mono mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-rose-400">visibility</span>
+<span>Simulador de Números en Vivo:</span>
+</div>
+<div class="flex items-center gap-1 overflow-x-auto py-1 scrollbar-none" id="preview-beads-numeros">
+<span class="bead-number">0</span>
+<span class="bead-number">9</span>
+<span class="bead-mineral-accent"></span>
+<span class="bead-number">0</span>
+<span class="bead-number">8</span>
+</div>
+</div>
+</div>
+<div class="space-y-2 pt-2 border-t border-amber-500/15">
+<input class="w-full bg-[#13111d] border border-amber-500/25 rounded-xl px-3 py-2 text-xs text-amber-100 placeholder-zinc-500 focus:outline-none focus:border-rose-400 transition" id="custom-numeros" oninput="updateNumberPreview(this.value)" placeholder="Ej: 09 08 o tu fecha 15 03..." type="text"/>
+<button class="w-full py-2.5 rounded-xl bg-gradient-to-r from-rose-600 to-purple-600 hover:from-rose-500 hover:to-purple-500 active:scale-95 text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-md shadow-rose-900/30 hover:shadow-lg hover:shadow-rose-500/25" onclick="addCustomProduct('Manilla con Números', 2500, 'https://lh3.googleusercontent.com/aida-public/AB6AXuC37FMzopwj1O-UuoyKfS0chk8mEiU2oBRygdhd98P9Uux4tVNKI9Fny2Ndzf-8lSp0oXv1yIa7Y6rvEMHTD79bWaUi2I-jKGo5Vsn1lalT6Tj0kruSKvzGjLXm_NEgBFAfacIxwg9wyn1RfX7n-ai6LWiJ6Rug7J2DiTjtQzwQsn-OCxqWRdOkMudA3knKtTJx_aV904Z7PbU9gZVnfgd4Vf6OwwprtF754PKlBC6z__vcOfpsLchwCEU4R4tY_vkfNQ', 'custom-numeros')">
+<span class="material-symbols-outlined text-sm">pin</span>
+<span>Agregar con tus Números • $2.500</span>
+</button>
+</div>
+</div>
+<!-- PRODUCT 4: Manilla Cuarzo Turquesa ($3.500) - IMAGE_9 -->
+<div class="product-card editorial-card rounded-2xl p-4 flex flex-col justify-between" data-category="minerales">
+<div>
+<div class="relative w-full h-60 rounded-xl overflow-hidden bg-black/60 border border-amber-500/20 group mb-3.5">
+<img alt="Manilla Cuarzo Turquesa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 cursor-pointer" onclick="openImageModal('https://lh3.googleusercontent.com/aida-public/AB6AXuAyQryk5SdBKRnMM6NvpMvwBRnxxPmx08ZWXOM_gwGaheeTZstlentUUh7dHbbn6ovVHW-8ziJNxOXIHPlPkqs1RdJdCD3SfSjTlGf55jIeRrK4ycnRRXaAIRpwY8RoA4VmirPvN3DeQBKDqQN7gi-P9V2unLIeVLD2QuAC1IGgv7T7SZH8W-uwKaJ_PZsoChu7_fZWhmrzq3SXzdHKoqLBx4w4BwFunuNRfi1w2f3FA_yBzmQ7xmFaQ9akMUsbJZZFMA', 'Manilla Cuarzo Turquesa ($3.500)')" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVlTLCINyLXZITUqHDAxptP0gwXK8-Xaue0IKVsneXiq_8CDFNBwjFvAmO8xj75JktQozvyQJdeotgjLzTNq4fLyTlhxzTik_QaX2DpoKRka_f-9GK8gmzbCJSgmZyo3GgKi7g-WCAxSJHotktMsgRAq5X8yCAWMyTFN90ZYUsc-MkTPrmGE6-skOKFTNvYArruu2qNGY4kRMCJrwZtBkzdTvk8XsD9s4QEmFLtZhs60tcNv05kNh__RZ68OdF96eRjA"/>
+<div class="absolute top-2.5 left-2.5 px-3 py-1 rounded-full bg-purple-500/25 backdrop-blur-md border border-purple-400/50 text-[10px] font-bold text-purple-200 flex items-center gap-1.5 uppercase tracking-wider shadow-md">
+<span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-ping"></span>
+<span>Onyx &amp; Cuarzo</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-lg bg-black/80 backdrop-blur-md text-[10px] text-teal-300 font-mono border border-white/10">
+            Tubo Central Turquesa
+          </div>
+</div>
+<div class="flex items-start justify-between gap-2 mb-1.5">
+<div>
+<h3 class="font-bold text-base text-white tracking-tight font-editorial">Manilla Cuarzo Turquesa</h3>
+<p class="text-[11px] text-purple-300/80">Elegancia oscura aterciopelada y luz mineral</p>
+</div>
+<span class="text-base font-black text-amber-400 font-editorial drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">$3.500</span>
+</div>
+<p class="text-xs text-zinc-300 leading-relaxed mb-4">
+          Perlas esféricas negras pulidas de sensación pesada combinadas con un cilindro en tono cuarzo turquesa. Presencia y sobriedad absoluta.
+        </p>
+</div>
+<div class="space-y-2 pt-3 border-t border-amber-500/15">
+<select class="w-full bg-[#13111d] border border-amber-500/25 rounded-xl px-3 py-2 text-xs text-amber-100 focus:outline-none focus:border-purple-400" id="size-cuarzo">
+<option value="Estándar Unisex Ajustable">Talla: Estándar Unisex (Ajustable)</option>
+<option value="Muñeca Delgada (14-16 cm)">Talla: Muñeca Delgada</option>
+<option value="Muñeca Ancha (18-21 cm)">Talla: Muñeca Grande</option>
+</select>
+<button class="w-full py-2.5 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-rose-600 hover:from-purple-500 hover:to-rose-500 active:scale-95 text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-md shadow-purple-900/30 hover:shadow-lg hover:shadow-purple-500/25" onclick="addToCart('Manilla Cuarzo Turquesa', 3500, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBA7biE2umjHKCpNz9V25m1emvMaTC6mDfMd6Fq57b5JtMzTCBLcWpJEGONrK_K5i8JNRZhGb3nfagALa3cMfTAwYWwHcKTX35xY8MLAdLLcV3lnrpxdpqAM4FgWYgm8nQUIv2A_Z0WoEJxcdhClYF_sGTKPUoRph4N3P5flwaitqRoBhKBKfZezy8bSgJPP8wwgsIco-e6cOEy8dNVsN5wMQmbmzXgQI32YTkeXWuAu7ZIsNFPKLp5wgZJM2PwxdWoAw', 'size-cuarzo')">
+<span class="material-symbols-outlined text-sm">diamond</span>
+<span>Agregar al Pedido • $3.500</span>
+</button>
+</div>
+</div>
+<!-- PRODUCT 5: Manilla San Benito Roja ($3.500) - IMAGE_10 -->
+<div class="product-card editorial-card rounded-2xl p-4 flex flex-col justify-between sm:col-span-2 sm:max-w-xl sm:mx-auto w-full" data-category="minerales">
+<div>
+<div class="relative w-full h-64 rounded-xl overflow-hidden bg-black/60 border border-amber-500/20 group mb-3.5">
+<img alt="Manilla San Benito Roja" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 cursor-pointer" onclick="openImageModal('https://lh3.googleusercontent.com/aida-public/AB6AXuA6Bj4DZIApxtl9GOSp8ZMGkWKihhhaVeFmxZraJimJMhYE0rFbvxpjE48rCyRi5Njwj-L1_-hqVyU1o97mU3Q-B4_aa7Mk3cVls32tkiDsoQiua3Ba4ngQKnsarx2oxx6Xwq1GdaRmvEsm7YQa7kkjXEzsoC25XdZZH6qCDHRAJeYpn17KhoNYK7fYorjUa7kzgRn7rqTU_DQH1hDYttMw2sos4ePNo_fF2etBimesI5ozHbSyMUN9pHS6kTsbcqTuPw', 'Manilla San Benito Roja ($3.500)')" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHzmASu2itC4c0jON6AJmKTmvDN0qEDKHae8HqLmBpKUl3t3GThoe5VRvcZENa6fjD-w3fvVEJh013GVUdVCCMGtGaJgCJI5NyuLz7ae8fuP-ivK1JDIbHOot0TSdlsssOufGoG80ohUOsMIbFO7BpGwHYHxWZgababwpVRF88s2iG3TDpmcw14f2CUSb4jsmawdk8L6QD_O1rMU3gDwfwKRqy7ufrk6mLAephzcIcjb6xyUQmPm6pnHXEWr-8Kmm9bA"/>
+<div class="absolute top-2.5 left-2.5 px-3 py-1 rounded-full bg-rose-600/35 backdrop-blur-md border border-rose-400/50 text-[10px] font-bold text-rose-200 flex items-center gap-1.5 uppercase tracking-wider shadow-md">
+<span class="w-1.5 h-1.5 rounded-full bg-red-400 animate-ping"></span>
+<span>Protección Sagrada</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-lg bg-black/80 backdrop-blur-md text-[10px] text-rose-300 font-mono border border-white/10">
+            Medalla San Benito Plateada
+          </div>
+</div>
+<div class="flex items-start justify-between gap-2 mb-1.5">
+<div>
+<h3 class="font-bold text-base text-white tracking-tight font-editorial">Manilla San Benito Roja</h3>
+<p class="text-[11px] text-rose-400">Nudos franciscanos de 7 protecciones &amp; medalla bendita</p>
+</div>
+<span class="text-base font-black text-amber-400 font-editorial drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">$3.500</span>
+</div>
+<p class="text-xs text-zinc-300 leading-relaxed mb-4">
+          El tradicional hilo rojo carmesí trenzado en nudos de fe con la medalla metálica de San Benito abad. Un escudo espiritual y accesorio de elegancia atemporal.
+        </p>
+</div>
+<div class="space-y-2 pt-3 border-t border-amber-500/15">
+<select class="w-full bg-[#13111d] border border-amber-500/25 rounded-xl px-3 py-2 text-xs text-amber-100 focus:outline-none focus:border-rose-400" id="tipo-sanbenito">
+<option value="Rojo Carmesí Clásico (Foto)">Color: Rojo Tradicional de Protección (Foto Original)</option>
+<option value="Negro Protección Absoluta">Color: Hilo Negro Azabache</option>
+<option value="Azul Rey Devoción">Color: Hilo Azul Rey</option>
+</select>
+<button class="w-full py-2.5 rounded-xl bg-gradient-to-r from-rose-600 via-red-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 active:scale-95 text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-md shadow-rose-900/30 hover:shadow-lg hover:shadow-rose-500/25" onclick="addToCart('Manilla San Benito Roja', 3500, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCtIM4bsJnuXlWY8Fh1bGIpZCo4SFJundjQzLq-65_1vXvS9lgLlh9tISgE1gZbApUNgxR0p8A4jSU26xk34Mc5Hf09e0Jierb5OdleXfrkcR9x1FS9AY7-4lT93qEGGJVpIJaPLZ8IDw2trE_WDmKKbUzhtTkJ-W7mABN2UKBRpLtXW8EWExG9UqFA4e6V5aI6kn6k0yvcXKmcxhlfnqDefq5i566YpSJDisqcgwys41Sda_4NxdPATWYO3UKV-amkJA', 'tipo-sanbenito')">
+<span class="material-symbols-outlined text-sm">shield</span>
+<span>Agregar al Pedido • $3.500</span>
+</button>
+</div>
+</div>
+</div>
+<!-- PASARELA DE PAGOS DIRECTA COLOMBIA (SOLO NEQUI) -->
+<section class="mb-12" id="pagos-colombia">
+<div class="editorial-card rounded-3xl p-6 sm:p-8 border border-amber-500/30">
+<div class="text-center max-w-lg mx-auto mb-6">
+<span class="text-[11px] font-bold tracking-widest text-pink-400 uppercase">Medios de Pago en Colombia</span>
+<h3 class="text-xl sm:text-2xl font-black text-white font-editorial mt-1">Paga Fácil, Rápido y Seguro</h3>
+<p class="text-xs text-zinc-400 mt-1">Aceptamos transferencias directas por Nequi sin comisiones adicionales.</p>
+</div>
+<div class="grid grid-cols-1 gap-4 max-w-md mx-auto">
+<!-- Tarjeta Nequi Oficial y Exclusiva -->
+<div class="bg-gradient-to-br from-[#240B32] via-[#1A0826] to-[#0F0517] p-5 rounded-2xl border border-pink-500/40 flex flex-col justify-between relative overflow-hidden shadow-xl shadow-pink-950/40">
+<div class="absolute -right-10 -bottom-10 w-32 h-32 bg-pink-600/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-4 relative z-10">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-2xl bg-[#2D0044] border border-pink-400/40 flex items-center justify-center text-pink-400 font-black text-xl shadow-inner">
+                N
+              </div>
+<div>
+<h4 class="text-sm font-black text-white tracking-wide flex items-center gap-1.5">
+<span>Nequi Colombia</span>
+<span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
+</h4>
+<p class="text-[11px] text-pink-300/90">Cuenta y Celular Oficial</p>
+</div>
+</div>
+<span class="text-[10px] font-bold bg-pink-500/20 text-pink-300 border border-pink-500/40 px-2.5 py-1 rounded-full">Inmediato</span>
+</div>
+<div class="bg-black/60 rounded-xl p-3 border border-pink-500/30 flex items-center justify-between relative z-10">
+<div>
+<span class="text-[10px] text-zinc-400 block">Número / Celular Nequi:</span>
+<span class="text-base sm:text-lg font-black text-amber-300 font-mono tracking-wider drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">320 430 6618</span>
+</div>
+<button class="px-3.5 py-2 rounded-xl bg-pink-600/30 hover:bg-pink-600/50 border border-pink-500/50 text-pink-100 text-xs font-bold flex items-center gap-1.5 transition-all active:scale-95 shadow-md hover:scale-105" id="btn-copy-nequi" onclick="copiarNequi()">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+<span id="txt-copy-nequi">Copiar</span>
+</button>
+</div>
+<p class="text-[11px] text-zinc-300 mt-3.5 flex items-center gap-1.5 relative z-10">
+<span class="material-symbols-outlined text-sm text-pink-400">verified</span>
+            Envía el comprobante a WhatsApp luego de realizar tu transferencia
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Identity & Creator Story (Editorial Card) -->
+<section class="editorial-card rounded-3xl p-6 sm:p-9 text-center mb-12 border border-amber-500/30 relative overflow-hidden">
+<div class="max-w-md mx-auto relative z-10">
+<div class="w-20 h-20 mx-auto rounded-full p-[2px] bg-gradient-to-tr from-amber-500 via-rose-600 to-purple-600 shadow-2xl mb-4 hover:scale-110 transition-transform duration-300">
+<img alt="Machos Manillas Logo Oficial" class="w-full h-full object-cover rounded-full bg-black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqwO3kwQl50TNw8bh_9S1OX5zz94geiSgH38lrixb0jAF9De98tdK2Ls9TaKb2rtIPx0CRxexisQ9sbWMHkxCU4dq1uqiXArWUARvhdTSStr4sWBNIFMSvaRwf-dBmFb3TrN9-T6xCEMbfMEmcKA3WYtylt8gTPfpthZQ6aBwHFvVbICHecWRCOHEdxC_8EA2eijIGobxX2mqODdPXmXhHOv4HRWQKM4mrqt7cS720SzaVC1Slw1QVsiRyMMoA5_WeQQ"/>
+</div>
+<h3 class="text-xl font-bold text-white font-editorial tracking-wider">MACHOS MANILLAS</h3>
+<p class="text-xs font-bold tracking-widest text-amber-400 uppercase mb-3">SIX SEVEN SML</p>
+<p class="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-5">
+        "Cada manilla que sale de nuestras manos lleva horas de dedicación, tensión precisa en cada nudo y la mejor energía para acompañarte en tu día a día."
+      </p>
+<a class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-emerald-600 to-teal-700 text-white text-xs font-bold uppercase tracking-wider hover:scale-105 active:scale-95 shadow-lg shadow-emerald-950/40 transition-all" href="https://wa.me/573204306618?text=Hola%20Machos%20Manillas,%20quiero%20conocer%20mas%20de%20su%20catalogo" target="_blank">
+<span class="material-symbols-outlined text-sm">chat</span>
+<span>Contactar al +57 320 430 6618</span>
+</a>
+</div>
+</section>
+<!-- Editorial Footer -->
+<footer class="text-center text-xs text-zinc-500 pb-12">
+<p class="font-editorial tracking-wider text-zinc-400">© 2026 MACHOS MANILLAS SIX SEVEN SML</p>
+<p class="text-[11px] text-zinc-600 mt-1">Editorial Luxury &amp; Craftsmanship • Terracotta Gold Collection</p>
+</footer>
+</div>
+<!-- Mobile Sticky Bottom Floating Bar with Pulsing Glow Effect -->
+<div class="fixed bottom-3 inset-x-3 sm:hidden z-40">
+<div class="glass-luxury-nav rounded-2xl p-2.5 flex items-center justify-between border border-amber-500/40 shadow-2xl" style="box-shadow: 0 0 25px rgba(245, 158, 11, 0.45);">
+<div class="flex items-center gap-2.5 pl-2">
+<div class="relative">
+<div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-600 flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+</div>
+<span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-amber-300 text-black font-extrabold text-[9px] flex items-center justify-center" id="mobile-badge">0</span>
+</div>
+<div>
+<span class="text-[10px] text-zinc-400 block">Total en Carrito</span>
+<span class="text-xs font-bold text-amber-300 font-editorial" id="mobile-total-price">$0 COP</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3.5 py-2 rounded-xl bg-white/10 text-white font-bold text-xs active:scale-95 transition" onclick="toggleCartModal()">
+        Ver Orden
+      </button>
+<button class="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-black font-extrabold text-xs flex items-center gap-1 active:scale-95 shadow-md shadow-emerald-900/40 transition hover:scale-105" onclick="checkoutWhatsApp()">
+<span>Pedir</span>
+<span class="material-symbols-outlined text-xs">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Shopping Cart Slide-over / Modal (Only Nequi) -->
+<div class="fixed inset-0 z-50 hidden transition-opacity duration-300" id="cart-modal">
+<div class="absolute inset-0 bg-black/85 backdrop-blur-md" onclick="toggleCartModal()"></div>
+<div class="absolute bottom-0 sm:bottom-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 w-full sm:max-w-md max-h-[88vh] flex flex-col bg-[#13111b] border-t sm:border border-amber-500/30 rounded-t-3xl sm:rounded-3xl shadow-2xl p-5 overflow-hidden">
+<!-- Header -->
+<div class="flex items-center justify-between pb-3 border-b border-amber-500/20">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+</div>
+<div>
+<h3 class="text-sm font-bold text-white font-editorial">Tu Pedido Exclusivo</h3>
+<p class="text-[10px] text-amber-400/80">MACHOS MANILLAS SIX SEVEN SML</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-zinc-400 flex items-center justify-center text-sm" onclick="toggleCartModal()">✕</button>
+</div>
+<!-- Items List -->
+<div class="py-4 overflow-y-auto max-h-[42vh] space-y-2.5" id="cart-items-container">
+<div class="text-center py-8 text-zinc-500">
+<span class="material-symbols-outlined text-3xl block mb-1 text-zinc-600">inventory_2</span>
+<p class="text-xs">Tu carrito está vacío</p>
+<p class="text-[11px] text-zinc-600">Selecciona tus manillas del catálogo para continuar</p>
+</div>
+</div>
+<!-- Customer Notes & Final Payment Form -->
+<div class="pt-3 border-t border-amber-500/20 space-y-2">
+<input class="w-full bg-black/50 border border-amber-500/20 rounded-xl px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-amber-400" id="customer-name" placeholder="Tu Nombre y Apellido..." type="text"/>
+<input class="w-full bg-black/50 border border-amber-500/20 rounded-xl px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-amber-400" id="customer-address" placeholder="Ciudad o Dirección de entrega en Colombia..." type="text"/>
+<!-- Total & Direct Checkout with Nequi badge -->
+<div class="flex items-center justify-between pt-1">
+<span class="text-xs text-zinc-400">Total Acumulado:</span>
+<span class="text-lg font-black text-amber-400 font-editorial" id="modal-total-price">$0 COP</span>
+</div>
+<div class="text-[10px] text-pink-300/90 flex items-center gap-1 font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
+<span>Pago directo por Nequi: 320 430 6618</span>
+</div>
+<button class="w-full py-3 rounded-2xl bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 text-black font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-xl shadow-emerald-950/50 hover:scale-[1.02] active:scale-95 transition-all" onclick="checkoutWhatsApp()">
+<span class="material-symbols-outlined text-base">send</span>
+<span>Enviar Pedido a WhatsApp (+57 320 430 6618)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Fullscreen Image Preview Lightbox Modal -->
+<div class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4" id="image-modal" onclick="closeImageModal()">
+<div class="relative max-w-lg w-full" onclick="event.stopPropagation()">
+<button class="absolute -top-10 right-0 text-white hover:text-amber-400 font-bold text-xs bg-white/10 px-3 py-1 rounded-full flex items-center gap-1" onclick="closeImageModal()">
+<span>Cerrar</span> ✕
+    </button>
+<img alt="Vista previa real" class="w-full h-auto max-h-[80vh] object-contain rounded-2xl border border-amber-500/30 shadow-2xl bg-black" id="lightbox-img" src=""/>
+<p class="text-center text-xs font-semibold text-amber-300 mt-3 font-editorial" id="lightbox-title"></p>
+</div>
+</div>
+<!-- Notification Toast -->
+<div class="fixed top-5 right-5 z-50 transform translate-y-[-100px] opacity-0 transition-all duration-300 pointer-events-none" id="toast">
+<div class="glass-luxury-nav px-4 py-2.5 rounded-2xl border border-amber-400/40 text-xs font-bold text-amber-200 flex items-center gap-2 shadow-2xl">
+<span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+<span id="toast-text">Producto agregado</span>
+</div>
+</div>
+<!-- Script Engine -->
+<script>
+  let cart = [];
+  const WHATSAPP_PHONE = '573204306618';
+
+  /* Floating Sparks Particle Animation on Canvas */
+  (function initCanvasSparks() {
+    const canvas = document.getElementById('sparkles-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const particles = Array.from({ length: 32 }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      size: Math.random() * 2.2 + 0.6,
+      vx: (Math.random() - 0.5) * 0.45,
+      vy: -Math.random() * 0.5 - 0.2,
+      alpha: Math.random() * 0.7 + 0.2,
+      color: Math.random() > 0.45 ? '#F59E0B' : (Math.random() > 0.5 ? '#E11D48' : '#06B6D4')
+    }));
+
+    function render() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.y < -10) { p.y = height + 10; p.x = Math.random() * width; }
+        if (p.x < -10) p.x = width + 10;
+        if (p.x > width + 10) p.x = -10;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = p.alpha;
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = p.color;
+        ctx.fill();
+      });
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(render);
+    }
+    render();
+  })();
+
+  /* Dynamic 3D Bead Live Simulator for Letters/Name */
+  function updateNamePreview(val) {
+    const container = document.getElementById('preview-beads-nombre');
+    if (!container) return;
+    const clean = (val || '').trim();
+    if (!clean) {
+      container.innerHTML = `
+        <span class="bead-mineral-accent"></span>
+        <span class="bead-letter">S</span>
+        <span class="bead-letter">I</span>
+        <span class="bead-letter">X</span>
+        <span class="bead-letter">7</span>
+        <span class="bead-mineral-accent"></span>
+      `;
+      return;
+    }
+
+    const letters = clean.toUpperCase().split('');
+    let html = `<span class="bead-mineral-accent"></span>`;
+    letters.forEach(char => {
+      if (char === ' ') {
+        html += `<span class="w-2.5 h-1 bg-amber-400/40 rounded"></span>`;
+      } else {
+        html += `<span class="bead-letter">${char}</span>`;
+      }
+    });
+    html += `<span class="bead-mineral-accent"></span>`;
+    container.innerHTML = html;
+  }
+
+  /* Dynamic 3D Bead Live Simulator for Numbers/Dates */
+  function updateNumberPreview(val) {
+    const container = document.getElementById('preview-beads-numeros');
+    if (!container) return;
+    const clean = (val || '').trim();
+    if (!clean) {
+      container.innerHTML = `
+        <span class="bead-number">0</span>
+        <span class="bead-number">9</span>
+        <span class="bead-mineral-accent"></span>
+        <span class="bead-number">0</span>
+        <span class="bead-number">8</span>
+      `;
+      return;
+    }
+
+    const numbers = clean.toUpperCase().split('');
+    let html = ``;
+    numbers.forEach(char => {
+      if (char === ' ' || char === '/' || char === '-') {
+        html += `<span class="bead-mineral-accent"></span>`;
+      } else {
+        html += `<span class="bead-number">${char}</span>`;
+      }
+    });
+    container.innerHTML = html;
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+    toastText.innerText = message;
+    toast.classList.remove('translate-y-[-100px]', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-[-100px]', 'opacity-0');
+    }, 2400);
+  }
+
+  function addToCart(title, price, image, selectId) {
+    const selectElement = document.getElementById(selectId);
+    const detail = selectElement ? selectElement.value : 'Estándar';
+
+    const existingItem = cart.find(item => item.title === title && item.detail === detail);
+    if (existingItem) {
+      existingItem.qty += 1;
+    } else {
+      cart.push({
+        id: Date.now(),
+        title: title,
+        price: price,
+        image: image,
+        detail: detail,
+        qty: 1
+      });
+    }
+
+    updateCartUI();
+    showToast(`¡${title} agregada al pedido!`);
+  }
+
+  function addCustomProduct(title, price, image, inputId) {
+    const inputElement = document.getElementById(inputId);
+    const textVal = inputElement ? inputElement.value.trim() : '';
+
+    if (!textVal) {
+      alert('Por favor escribe tu texto, iniciales o números para personalizar tu manilla.');
+      if (inputElement) inputElement.focus();
+      return;
+    }
+
+    cart.push({
+      id: Date.now(),
+      title: title,
+      price: price,
+      image: image,
+      detail: `Personalizado: "${textVal}"`,
+      qty: 1
+    });
+
+    if (inputElement) inputElement.value = '';
+    if (inputId === 'custom-nombre') updateNamePreview('');
+    if (inputId === 'custom-numeros') updateNumberPreview('');
+
+    updateCartUI();
+    showToast(`¡${title} personalizada agregada!`);
+  }
+
+  function updateQuantity(id, change) {
+    const item = cart.find(i => i.id === id);
+    if (item) {
+      item.qty += change;
+      if (item.qty <= 0) {
+        cart = cart.filter(i => i.id !== id);
+      }
+    }
+    updateCartUI();
+  }
+
+  function updateCartUI() {
+    const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+    const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+    const formattedTotal = `$${totalPrice.toLocaleString('es-CO')} COP`;
+
+    const badge = document.getElementById('cart-badge');
+    const mobileBadge = document.getElementById('mobile-badge');
+    const mobileTotal = document.getElementById('mobile-total-price');
+    const modalTotal = document.getElementById('modal-total-price');
+
+    if (badge) {
+      badge.innerText = totalItems;
+      if (totalItems > 0) {
+        badge.classList.remove('scale-0');
+        badge.classList.add('scale-100');
+      } else {
+        badge.classList.remove('scale-100');
+        badge.classList.add('scale-0');
+      }
+    }
+
+    if (mobileBadge) mobileBadge.innerText = totalItems;
+    if (mobileTotal) mobileTotal.innerText = formattedTotal;
+    if (modalTotal) modalTotal.innerText = formattedTotal;
+
+    const container = document.getElementById('cart-items-container');
+    if (!container) return;
+
+    if (cart.length === 0) {
+      container.innerHTML = `
+        <div class="text-center py-8 text-zinc-500">
+          <span class="material-symbols-outlined text-3xl block mb-1 text-zinc-600">inventory_2</span>
+          <p class="text-xs">Tu carrito está vacío</p>
+          <p class="text-[11px] text-zinc-600">Selecciona tus manillas del catálogo para continuar</p>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = cart.map(item => `
+      <div class="flex items-center justify-between gap-3 bg-white/5 p-2.5 rounded-xl border border-amber-500/20">
+        <img src="${item.image}" alt="${item.title}" class="w-12 h-12 rounded-lg object-cover bg-black border border-amber-500/30">
+        <div class="flex-1 min-w-0">
+          <h4 class="text-xs font-bold text-white truncate font-editorial">${item.title}</h4>
+          <p class="text-[10px] text-amber-300/80 truncate">${item.detail}</p>
+          <span class="text-xs font-bold text-amber-400">$${(item.price * item.qty).toLocaleString('es-CO')}</span>
+        </div>
+        <div class="flex items-center gap-1.5 bg-black/60 border border-amber-500/20 rounded-lg p-1">
+          <button onclick="updateQuantity(${item.id}, -1)" class="w-5 h-5 rounded flex items-center justify-center text-xs font-bold text-zinc-400 hover:text-white bg-white/5">-</button>
+          <span class="text-xs font-bold px-1 text-white">${item.qty}</span>
+          <button onclick="updateQuantity(${item.id}, 1)" class="w-5 h-5 rounded flex items-center justify-center text-xs font-bold text-zinc-400 hover:text-white bg-white/5">+</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function toggleCartModal() {
+    const modal = document.getElementById('cart-modal');
+    modal.classList.toggle('hidden');
+    updateCartUI();
+  }
+
+  function checkoutWhatsApp() {
+    if (cart.length === 0) {
+      alert('Por favor agrega al menos una manilla al carrito antes de hacer el pedido.');
+      return;
+    }
+
+    const name = document.getElementById('customer-name').value.trim() || 'Cliente';
+    const address = document.getElementById('customer-address').value.trim() || 'Por acordar';
+    const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+    let msg = `✨ *ORDEN - MACHOS MANILLAS SIX SEVEN SML* ✨\n\n`;
+    msg += `👤 *Cliente:* ${name}\n`;
+    msg += `📍 *Ciudad/Destino:* ${address}\n`;
+    msg += `💳 *Método de Pago:* Nequi (320 430 6618)\n\n`;
+    msg += `🛍️ *PRODUCTOS SELECCIONADOS:*\n`;
+
+    cart.forEach((item, index) => {
+      msg += `${index + 1}. *${item.title}* (Cant: ${item.qty})\n`;
+      msg += `   ↳ _${item.detail}_\n`;
+      msg += `   ↳ Subtotal: $${(item.price * item.qty).toLocaleString('es-CO')} COP\n\n`;
+    });
+
+    msg += `💰 *TOTAL A PAGAR:* $${totalPrice.toLocaleString('es-CO')} COP\n\n`;
+    msg += `¡Hola! Ya tengo lista mi orden para confirmación y envío de comprobante de pago por Nequi. Muchas gracias! 🔥`;
+
+    const encodedMsg = encodeURIComponent(msg);
+    window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodedMsg}`, '_blank');
+  }
+
+  function filterCategory(cat) {
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(btn => {
+      if (btn.dataset.cat === cat) {
+        btn.classList.add('bg-gradient-to-r', 'from-amber-500', 'to-rose-600', 'text-white');
+        btn.classList.remove('bg-white/5', 'text-amber-200');
+      } else {
+        btn.classList.remove('bg-gradient-to-r', 'from-amber-500', 'to-rose-600', 'text-white');
+        btn.classList.add('bg-white/5', 'text-amber-200');
+      }
+    });
+
+    const cards = document.querySelectorAll('.product-card');
+    cards.forEach(card => {
+      if (cat === 'todos' || card.dataset.category === cat) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function openImageModal(imgSrc, title) {
+    document.getElementById('lightbox-img').src = imgSrc;
+    document.getElementById('lightbox-title').innerText = title;
+    document.getElementById('image-modal').classList.remove('hidden');
+  }
+
+  function closeImageModal() {
+    document.getElementById('image-modal').classList.add('hidden');
+  }
+
+  function copiarNequi() {
+    navigator.clipboard.writeText("3204306618").then(() => {
+      const txt = document.getElementById('txt-copy-nequi');
+      txt.innerText = '¡Copiado!';
+      showToast('Número Nequi copiado: 320 430 6618');
+      setTimeout(() => {
+        txt.innerText = 'Copiar';
+      }, 2500);
+    });
+  }
+
+  updateCartUI();
+</script>
+</body></html>
